@@ -1,0 +1,41 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.page-heading,
+.map-pane {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0px;
+}
+
+.events-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.event-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1%;
+  padding-top: 2px;
+  background-color: rgba(85, 53, 53, 0);
+  color: white;
+  transition: 1s ease-out;
+  border-radius: 15px;
+}
+
+.event-box:hover {
+  background-color: rgba(85, 53, 53, 0.6);
+  transition: 1s ease-in;
+}
+
+.event-image {
+  margin: auto;
+  width: 25em;
+}
