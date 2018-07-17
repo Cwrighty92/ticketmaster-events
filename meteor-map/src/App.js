@@ -3,7 +3,7 @@ import FilterBox from "./components/FilterBox";
 import axios from "axios";
 import ResultsPane from "./components/ResultsPane";
 import "./App.css";
-
+import apiKey from "./config";
 class App extends Component {
   state = {
     eventsList: []
@@ -11,7 +11,7 @@ class App extends Component {
   componentDidMount() {
     axios
       .get(
-        "https://app.ticketmaster.com/discovery/v2/events.json?size=100&apikey=sNNNfxZjbEFQcYYkXLrGJkxviHj0Ec9E"
+        `https://app.ticketmaster.com/discovery/v2/events.json?size=100&apikey=${apiKey}`
       )
       .then(({ data }) => {
         const freshData = data._embedded.events;
