@@ -8,12 +8,13 @@ import apiKey from "./config";
 
 class App extends Component {
   state = {
-    eventsList: []
+    eventsList: [],
+    geoHash: ""
   };
   componentDidMount() {
     axios
       .get(
-        `https://app.ticketmaster.com/discovery/v2/events.json?size=100&apikey=${apiKey}`
+        `https://app.ticketmaster.com/discovery/v2/events.json?size=10&apikey=${apiKey}&geoPoint=gcw2&radius=25`
       )
       .then(({ data }) => {
         const freshData = data._embedded.events;
@@ -27,10 +28,10 @@ class App extends Component {
       <div>
         <h1 className="page-heading">Ticketmaster API</h1>
         <div className="mapSpace">
-          <OurMap />
+          <OurMap eventsList={this.state.eventsList} />
         </div>
-        <ResultsPane eventsList={this.state.eventsList} />
-        <FilterBox />
+        {/* <ResultsPane eventsList={this.state.eventsList} />
+        <FilterBox /> */}
       </div>
     );
   }
