@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import FilterBox from "./components/FilterBox";
 import axios from "axios";
 import ResultsPane from "./components/ResultsPane";
+import OurMap from "./components/OurMap";
 import "./App.css";
 import apiKey from "./config";
+
 class App extends Component {
   state = {
     eventsList: []
@@ -24,7 +26,9 @@ class App extends Component {
     return (
       <div>
         <h1 className="page-heading">Ticketmaster API</h1>
-        <div class="map-pane">Map Here Later </div>
+        <div className="mapSpace">
+          <OurMap />
+        </div>
         <ResultsPane eventsList={this.state.eventsList} />
         <FilterBox />
       </div>
