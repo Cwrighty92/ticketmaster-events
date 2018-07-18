@@ -19,11 +19,13 @@ class OurMap extends Component {
       let coords = leafletMap.getCenter();
       let newZoom = leafletMap.getZoom();
       let newMapCentre = [coords.lat, coords.lng];
-      console.log(newMapCentre);
+      let newGeohash = Geohash.encode(coords.lat, coords.lng, 4);
+      this.props.updateGeoHash(newGeohash);
       this.setState({
         mapCenter: newMapCentre,
         zoomLevel: newZoom
       });
+      console.log("<<<<<<<<<<<");
     });
   }
   render() {
