@@ -1,5 +1,5 @@
 # Ticketmaster-leaflet-events
-Using leaflet created a small web app that on zoom displays the local events within the given area. This app still needs alot of work in regards to styling and presening the data on the markers on the map with information and a link to the event.
+Using leaflet created a small web app that on zoom displays the local events within the given area. This app still needs alot of work in regards to styling and presening the data on the markers on the map with information and a link to the event. I am currently working on testing this app with cypress.
 
 You will need to add a config file to supply the ticketmaster keys for the api calls 
 
