@@ -1,6 +1,15 @@
 # Ticketmaster-leaflet-events
 Using leaflet created a small web app that on zoom displays the local events within the given area. This app still needs alot of work in regards to styling and presening the data on the markers on the map with information and a link to the event.
 
+You will need to add a config file to supply the ticketmaster keys for the api calls 
+
+Create a file in the src folder and call it config.js and add the below to the file ensure this file is gitignored
+
+```
+const apiKey = "Enter personal API key here!;
+export default apiKey;
+```
+You will need to sign up and aquire a ticketmaster apiKey to use this app from: https://developer.ticketmaster.com/
 
 ## Prerequisites
 
